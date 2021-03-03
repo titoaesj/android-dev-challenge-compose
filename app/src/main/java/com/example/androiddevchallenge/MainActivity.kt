@@ -121,36 +121,44 @@ fun infoDogComp(dog: Dog?) {
         )
 
         Row(Modifier.padding(start = 8.dp, top = 8.dp, end = 8.dp)) {
-            Text(text = "Oigem:", Modifier.padding(end = 8.dp),style = typography.caption)
+            Text(text = "Oigem:", Modifier.padding(end = 8.dp), style = typography.caption)
             Text(text = dog?.origin.toString())
         }
 
         Row(Modifier.padding(start = 8.dp, top = 8.dp, end = 8.dp)) {
-            Text(text = "Peso:", Modifier.padding(end = 8.dp),style = typography.caption)
+            Text(text = "Peso:", Modifier.padding(end = 8.dp), style = typography.caption)
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_male),
                 contentDescription = "male icon"
             )
-            Text(text = dog?.weightMale.toString(), Modifier.padding(end = 4.dp),style = typography.body1)
+            Text(
+                text = dog?.weightMale.toString(),
+                Modifier.padding(end = 4.dp),
+                style = typography.body1
+            )
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_female),
                 contentDescription = "female icon"
             )
-            Text(text = dog?.weightFamale.toString(),style = typography.body1)
+            Text(text = dog?.weightFamale.toString(), style = typography.body1)
         }
 
         Row(Modifier.padding(start = 8.dp, top = 8.dp, end = 8.dp, bottom = 16.dp)) {
-            Text(text = "Altura:", Modifier.padding(end = 8.dp),style = typography.caption)
+            Text(text = "Altura:", Modifier.padding(end = 8.dp), style = typography.caption)
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_male),
                 contentDescription = "male icon"
             )
-            Text(text = dog?.heightMale.toString(), Modifier.padding(end = 4.dp),style = typography.body1)
+            Text(
+                text = dog?.heightMale.toString(),
+                Modifier.padding(end = 4.dp),
+                style = typography.body1
+            )
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.ic_female),
                 contentDescription = "female icon"
             )
-            Text(text = dog?.heightFemale.toString(),style = typography.body1)
+            Text(text = dog?.heightFemale.toString(), style = typography.body1)
         }
 
     }
@@ -169,7 +177,7 @@ fun CardItemComp(dog: Dog?, activity: Activity) {
                 val bundle = Bundle()
                 bundle.putParcelable("dog_param", dog)
                 intent.putExtras(bundle)
-                activity.startActivity( intent )
+                activity.startActivity(intent)
 
             },
         elevation = 4.dp

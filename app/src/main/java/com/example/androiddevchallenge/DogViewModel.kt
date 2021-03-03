@@ -1,7 +1,5 @@
 package com.example.androiddevchallenge
 
-import android.os.Parcelable
-import androidx.annotation.DrawableRes
 import androidx.lifecycle.ViewModel
 import com.example.androiddevchallenge.model.Dog
 
